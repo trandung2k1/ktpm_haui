@@ -13,8 +13,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(helmet());
 app.use(morgan('combined'));
-app.get('/', async (req, res) => {
-    await producer.publishMessage('Info', 'Dowload successfully');
+app.post('/sendLog', async (req, res) => {
+    const { logType, message } = req.body;
+    await producer.publishMessage(logType, message);
     return res.status(200).json({
         message: 'Welcome to the server',
     });

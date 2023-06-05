@@ -1,0 +1,15 @@
+{
+    "name": "warningAndErrorMS",
+    "version": "1.0.0",
+    "main": "app.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "nodemon"
+    },
+    "dependencies": {
+        "amqplib": "^0.10.3"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.22"
+    }
+}
